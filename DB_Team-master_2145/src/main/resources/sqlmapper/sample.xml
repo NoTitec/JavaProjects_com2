@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.SampleMapper">
+    <resultMap id="result" type="persistence.dto.SampleDTO">
+        <result property="id" column="sample_id"/>
+
+    </resultMap>
+
+    <select id="selectAll" resultMap="result">
+        SELECT * FROM Sample
+    </select>
+    <select id="findPostWithTitleLike" resultMap="result">
+        SELECT * FROM Sample
+        WHERE HIT =0
+        <if test="title!=null">
+            AND title like CONCAT('%', #{title},'%')
+        </if>
+        <if test="writer!=null">
+            AND writer like CONCAT('%', #{writer},'%')
+        </if>
+    </select>
+
+    <insert id="insertSample" useGeneratedKeys="true" keyProperty="id">
+        insert into Sample (title, writer, contents, regdate,hit)
+        values (#{title}, #{writer}, #{contents}, #{regDate}, #{hit})
+
+    </insert>
+
+    <update id="updateSample">
+        update Sample set
+        title = #{title},
+        writer= #{writer},
+        contents = #{contents},
+        regdate = #{regDate},
+        hit = #{hit}
+        where board_id = #{id}
+    </update>
+
+    <delete id="deleteSample">
+        delete from Sample where board_id = #{id}
+    </delete>
+</mapper>
