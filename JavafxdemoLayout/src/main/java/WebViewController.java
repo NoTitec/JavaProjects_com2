@@ -9,6 +9,6 @@ public class WebViewController {
     private void initialize()
     {
         WebEngine engine = webView.getEngine();
-        engine.load("https://www.youtube.com/");
+        engine.load("https://www.youtube.com/embed/kR77WlHRZrs");
     }
 }
