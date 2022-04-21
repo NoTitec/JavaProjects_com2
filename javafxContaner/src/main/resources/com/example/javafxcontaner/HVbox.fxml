@@ -10,7 +10,8 @@
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/applelogo.jpg" />
-         </image></ImageView>
+         </image>
+      </ImageView>
       <HBox alignment="CENTER" spacing="20.0">
          <children>
             <Button maxWidth="1.7976931348623157E308"  text="이전" HBox.hgrow="ALWAYS" />
