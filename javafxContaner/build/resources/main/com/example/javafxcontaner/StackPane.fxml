@@ -11,7 +11,7 @@
 <StackPane>
     <children>
         <ImageView fitWidth="400" preserveRatio="true">
-            <image> <Image url="@../../../images/space.jpg"></Image></image>
+            <image> <Image url="https://recipe1.ezmember.co.kr/cache/recipe/2022/02/17/1f40ef46386de280a5d80601d0d39ae01.jpg"></Image></image>
         </ImageView>
         <ImageView fitWidth="200" preserveRatio="true">
             <image> <Image url="@../../../images/applelogo.jpg"></Image></image>

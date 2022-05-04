@@ -1,4 +1,4 @@
-package com.example.javafxcontaner;
+package com.example.javafxbinding;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
